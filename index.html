@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environmental Performance & Action Hub</title>
+
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #667085;
+      --accent: #9f1d20;
+      --green-bg: #e6f4ea;
+      --green-text: #137333;
+      --amber-bg: #fff4e5;
+      --amber-text: #b26a00;
+      --neutral-bg: #eef2f6;
+      --neutral-text: #555;
+      --border: #dddddd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      margin: 0;
+      padding: 20px;
+      color: var(--text);
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+
+    .intro {
+      text-align: center;
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto 24px;
+      line-height: 1.45;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      min-height: 150px;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    .value {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .status {
+      font-size: 12px;
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .good {
+      background: var(--green-bg);
+      color: var(--green-text);
+    }
+
+    .watch {
+      background: var(--amber-bg);
+      color: var(--amber-text);
+    }
+
+    .neutral {
+      background: var(--neutral-bg);
+      color: var(--neutral-text);
+    }
+
+    a {
+      display: block;
+      margin-top: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      max-width: 1100px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* Tablet layout: two columns */
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile layout: one column */
+    @media (max-width: 520px) {
+      body {
+        padding: 14px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .intro {
+        font-size: 14px;
+        margin-bottom: 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: 135px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Environmental Performance &amp; Action Hub</h1>
+
+  <p class="intro">
+    A simple KPI view linking environmental performance to actions and behaviour.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>Energy Consumption</h2>
+      <div class="value">177.3 GWh</div>
+      <div class="status good">35% below 2018 baseline</div>
+      <a href="#">View energy →</a>
+    </div>
+
+    <div class="card">
+      <h2>Renewable Energy</h2>
+      <div class="value">2.1%</div>
+      <div class="status good">Increasing</div>
+      <a href="#">View renewables →</a>
+    </div>
+
+    <div class="card">
+      <h2>GHG Emissions</h2>
+      <div class="value">139,008 tCO₂e</div>
+      <div class="status good">37% below baseline</div>
+      <a href="#">View emissions →</a>
+    </div>
+
+    <div class="card">
+      <h2>Water Consumption</h2>
+      <div class="value">270,667 kl</div>
+      <div class="status neutral">Baseline developing</div>
+      <a href="#">View water →</a>
+    </div>
+
+    <div class="card">
+      <h2>Waste Diverted</h2>
+      <div class="value">70%</div>
+      <div class="status good">Improving</div>
+      <a href="#">View waste →</a>
+    </div>
+
+    <div class="card">
+      <h2>Paper Use</h2>
+      <div class="value">195 t</div>
+      <div class="status good">84% reduction</div>
+      <a href="#">View paper →</a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Demo values based on available 2018–2023 performance data.
+  </div>
+
+</body>
+</html>
