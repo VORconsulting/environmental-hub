@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renewable Energy | Environmental Performance & Action Hub</title>
+  <style>
+    :root {
+      --bg: #f4f6f8; --card: #ffffff; --text: #1f2933; --muted: #667085; --accent: #9f1d20;
+      --green-bg: #e6f4ea; --green-text: #137333; --amber-bg: #fff4e5; --amber-text: #b26a00;
+      --neutral-bg: #eef2f6; --neutral-text: #555; --border: #dddddd;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: var(--bg); margin: 0; padding: 20px; color: var(--text); }
+    .page { max-width: 1100px; margin: 0 auto; }
+    .top-link { display: inline-block; color: var(--accent); text-decoration: none; font-weight: bold; font-size: 14px; margin-bottom: 14px; }
+    .top-link:hover { text-decoration: underline; }
+    .hero { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); margin-bottom: 16px; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; font-weight: bold; margin-bottom: 8px; }
+    h1 { margin: 0 0 8px; font-size: 34px; }
+    .intro { color: var(--muted); max-width: 800px; line-height: 1.45; margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 16px; }
+    .grid.two { grid-template-columns: 1.5fr 1fr; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+    .card h2 { margin: 0 0 10px; font-size: 19px; }
+    .value { font-size: 30px; font-weight: bold; margin-bottom: 6px; }
+    .label { color: var(--muted); font-size: 13px; line-height: 1.35; }
+    .status { font-size: 12px; display: inline-block; padding: 5px 9px; border-radius: 999px; font-weight: bold; margin-top: 10px; }
+    .good { background: var(--green-bg); color: var(--green-text); }
+    .watch { background: var(--amber-bg); color: var(--amber-text); }
+    .neutral { background: var(--neutral-bg); color: var(--neutral-text); }
+    .counter { font-size: 36px; font-weight: 800; color: var(--green-text); margin: 8px 0; letter-spacing: -0.02em; }
+    .counter-sub { color: var(--muted); font-size: 12px; margin-top: 6px; }
+    .mini-metric { margin-top: 12px; padding: 10px; background: #f8fafc; border: 1px solid var(--border); border-radius: 10px; font-size: 13px; color: var(--muted); }
+    .mini-metric strong { color: var(--text); display: block; margin-bottom: 3px; }
+    .chart { height: 280px; margin-top: 10px; display: flex; justify-content: center; align-items: center; }
+    svg { height: 100%; max-width: 700px; width: 100%; }
+    .legend { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 12px; margin-top: 8px; justify-content: center; }
+    .legend span::before { content: ""; display: inline-block; width: 18px; height: 3px; margin-right: 6px; vertical-align: middle; background: #18864b; }
+    .legend .target::before { background: var(--accent); border-top: 2px dashed var(--accent); height: 0; }
+    .source-list { display: grid; gap: 10px; margin-top: 10px; }
+    .source { background: #f8fafc; border: 1px solid var(--border); border-radius: 10px; padding: 10px; font-size: 14px; }
+    .source strong { display: block; margin-bottom: 3px; }
+    .projects { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .project-card { background: #ffffff; border: 1px solid var(--border); border-radius: 14px; padding: 14px; min-height: 120px; box-shadow: 0 4px 12px rgba(0,0,0,0.035); }
+    .project-card h3 { margin: 0 0 8px; font-size: 16px; }
+    .project-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.35; }
+    .button-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+    .button { display: block; text-decoration: none; text-align: center; border-radius: 14px; padding: 16px; font-weight: bold; line-height: 1.3; }
+    .button.primary { background: var(--accent); color: white; }
+    .button.secondary { background: white; color: var(--accent); border: 1px solid var(--accent); }
+    .footer { color: var(--muted); font-size: 12px; text-align: center; margin-top: 18px; }
+    @media (max-width: 900px) { .grid, .grid.two, .projects, .button-row { grid-template-columns: 1fr; } h1 { font-size: 28px; } .chart { height: 240px; } }
+    @media (max-width: 520px) { body { padding: 14px; } .hero { padding: 18px; } .counter { font-size: 30px; } .value { font-size: 26px; } }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- ================== BACK LINK ================== -->
+    <a class="top-link" href="index.html">← Back to Hub</a>
+
+    <!-- ================== HERO ================== -->
+    <section class="hero">
+      <div class="eyebrow">Renewable Energy Performance</div>
+      <h1>Renewable Energy</h1>
+      <p class="intro">
+        This page summarises Absa's renewable energy performance, showing the share of total energy supplied from renewable sources,
+        and how this connects to energy consumption and greenhouse gas emissions.
+      </p>
+    </section>
+
+    <!-- ================== HEADLINE KPI CARDS ================== -->
+    <section class="grid">
+      <div class="card">
+        <h2>2023 Renewable Share</h2>
+        <div class="value">2.1%</div>
+        <div class="label">Share of total energy consumption supplied from renewable sources.</div>
+      </div>
+
+      <div class="card">
+        <h2>Target Direction</h2>
+        <div class="value">Increase</div>
+        <div class="label">Renewable energy needs to increase as a share of total energy consumption.</div>
+        <div class="status good">Positive direction</div>
+      </div>
+
+      <div class="card">
+        <h2>2030 Target Status</h2>
+        <div class="value">10%</div>
+        <div class="label">Target to increase renewable energy to 10% of total energy consumption by 2028 and maintain through 2030.</div>
+        <div class="status watch">Further progress needed</div>
+      </div>
+    </section>
+
+    <!-- ================== COUNTER AND RENEWABLE ENERGY BREAKDOWN ================== -->
+    <section class="grid two">
+      <div class="card">
+        <h2>Renewable Share Progress</h2>
+        <div class="counter" id="renewableCounter">0.0%</div>
+        <div class="label">
+          Demo counter showing the 2023 renewable energy share as a proportion of total energy consumption.
+        </div>
+        <div class="counter-sub">
+          The number animates to the reported 2023 renewable share when the page loads.
+        </div>
+        <div class="mini-metric">
+          <strong>Target gap</strong>
+          The 2023 renewable share remains below the 10% target level.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Renewable Energy Pathways</h2>
+        <div class="source-list">
+          <div class="source"><strong>Self-produced solar</strong>On-site renewable electricity generation where feasible</div>
+          <div class="source"><strong>Purchased renewable electricity</strong>Renewable supply through procurement mechanisms</div>
+          <div class="source"><strong>Energy efficiency</strong>Reducing total demand makes renewable share easier to improve</div>
+          <div class="source"><strong>Performance focus</strong>Increasing renewable share while reducing total energy use</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== PERFORMANCE TREND ================== -->
+    <section class="card">
+      <h2>Renewable Energy Trend</h2>
+      <div class="label">Illustrative trend based on available 2018–2023 renewable energy performance information.</div>
+
+      <div class="chart">
+        <svg viewBox="0 0 700 300" preserveAspectRatio="xMidYMid meet">
+          <line x1="55" y1="250" x2="670" y2="250" stroke="#d9e1e8" stroke-width="2"/>
+          <line x1="55" y1="35" x2="55" y2="250" stroke="#d9e1e8" stroke-width="2"/>
+          <line x1="55" y1="205" x2="670" y2="205" stroke="#eef2f6" stroke-width="1"/>
+          <line x1="55" y1="160" x2="670" y2="160" stroke="#eef2f6" stroke-width="1"/>
+          <line x1="55" y1="115" x2="670" y2="115" stroke="#eef2f6" stroke-width="1"/>
+          <line x1="55" y1="70" x2="670" y2="70" stroke="#eef2f6" stroke-width="1"/>
+
+          <polyline points="55,245 116,242 178,238 240,240 301,228 363,205" fill="none" stroke="#18864b" stroke-width="5" stroke-linecap="round"/>
+          <polyline points="55,245 363,185 670,70" fill="none" stroke="#9f1d20" stroke-width="4" stroke-dasharray="8,7" stroke-linecap="round"/>
+
+          <circle cx="55" cy="245" r="5" fill="#18864b"/>
+          <circle cx="116" cy="242" r="5" fill="#18864b"/>
+          <circle cx="178" cy="238" r="5" fill="#18864b"/>
+          <circle cx="240" cy="240" r="5" fill="#18864b"/>
+          <circle cx="301" cy="228" r="5" fill="#18864b"/>
+          <circle cx="363" cy="205" r="5" fill="#18864b"/>
+
+          <text x="55" y="275" text-anchor="middle" font-size="13" fill="#667085">2018</text>
+          <text x="116" y="275" text-anchor="middle" font-size="13" fill="#667085">2019</text>
+          <text x="178" y="275" text-anchor="middle" font-size="13" fill="#667085">2020</text>
+          <text x="240" y="275" text-anchor="middle" font-size="13" fill="#667085">2021</text>
+          <text x="301" y="275" text-anchor="middle" font-size="13" fill="#667085">2022</text>
+          <text x="363" y="275" text-anchor="middle" font-size="13" fill="#667085">2023</text>
+          <text x="670" y="275" text-anchor="middle" font-size="13" fill="#667085">2028</text>
+
+          <text x="382" y="200" font-size="13" fill="#18864b">Actual performance</text>
+          <text x="382" y="86" font-size="13" fill="#9f1d20">Target pathway</text>
+        </svg>
+      </div>
+
+      <div class="legend">
+        <span>Actual performance</span>
+        <span class="target">Target pathway</span>
+      </div>
+    </section>
+
+    <!-- ================== FEATURED PROJECTS ================== -->
+    <section class="card" style="margin-top:16px;">
+      <h2>Featured Project Areas</h2>
+      <div class="label">Example action areas that can support increased renewable energy performance.</div>
+
+      <div class="projects" style="margin-top:12px;">
+        <div class="project-card">
+          <h3>On-site Solar</h3>
+          <p>Increasing renewable electricity generation where suitable sites and business cases allow.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Renewable Procurement</h3>
+          <p>Exploring renewable electricity supply options through procurement mechanisms.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Energy Demand Reduction</h3>
+          <p>Reducing total energy demand so renewable sources can represent a larger share.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Renewable Energy Data</h3>
+          <p>Improving visibility of renewable energy generation, procurement and contribution to total energy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== RELATED PERFORMANCE ================== -->
+    <section class="card" style="margin-top:16px;">
+      <h2>Related Performance</h2>
+      <div class="label">Renewable energy performance is closely linked to total energy consumption and greenhouse gas emissions.</div>
+
+      <a class="button secondary" href="energy.html"
+        style="margin-top:12px; color: var(--text); background:#eef2f6; border:1px solid var(--border);">
+        Explore related performance: Energy Consumption →
+      </a>
+
+      <a class="button secondary" href="ghg.html"
+        style="margin-top:12px; color: var(--text); background:#eef2f6; border:1px solid var(--border);">
+        Explore related performance: GHG Emissions →
+      </a>
+    </section>
+
+    <!-- ================== ACTION BUTTONS ================== -->
+    <section class="button-row">
+      <a class="button primary" href="renewable_actions_absa.html">
+        How Absa Is Improving Renewable Energy Performance →
+      </a>
+      <a class="button secondary" href="renewable_actions_user.html">
+        How You Can Support Renewable Energy Performance →
+      </a>
+    </section>
+
+    <!-- ================== FOOTER ================== -->
+    <div class="footer">
+      Demo page based on available 2018–2023 renewable energy performance information.
+    </div>
+
+  </div>
+
+  <!-- ================== DEMO COUNTER SCRIPT ================== -->
+  <script>
+    const startValue = 0.5;
+    const targetValue = 2.1;
+    const duration = 12000;
+    const start = performance.now();
+    const counter = document.getElementById("renewableCounter");
+
+    function animateCounter(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = startValue + (targetValue - startValue) * eased;
+
+      counter.textContent = value.toLocaleString(undefined, {
+        minimumFractionDigits: 1,
+        maximumFractionDigits: 1
+      }) + "%";
+
+      if (progress < 1) {
+        requestAnimationFrame(animateCounter);
+      }
+    }
+
+    requestAnimationFrame(animateCounter);
+  </script>
+</body>
+</html>
