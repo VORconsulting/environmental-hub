@@ -45,16 +45,16 @@
       line-height: 1.45;
     }
 
-    /* ================== KPI GRID ================== */
+    /* ================== THEME GRID ================== */
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 15px;
       max-width: 1100px;
       margin: 0 auto;
     }
 
-    /* ================== KPI CARD ================== */
+    /* ================== CARD STYLING ================== */
     .card {
       background: var(--card);
       padding: 18px;
@@ -67,6 +67,17 @@
     .card h2 {
       margin: 0 0 10px;
       font-size: 19px;
+    }
+
+    .theme-title {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
     }
 
     .value {
@@ -83,10 +94,34 @@
       font-weight: bold;
     }
 
-    /* ================== GRAPH ================== */
+    /* ================== FEATURED KPI BLOCK ================== */
+    .featured-kpi {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin: 18px 0;
+    }
+
+    .featured-label {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .featured-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    /* ================== MINI GRAPH ================== */
     .line {
       height: 50px;
-      margin: 10px 0 6px;
+      margin: 14px 0 6px;
     }
 
     svg {
@@ -99,16 +134,48 @@
     .watch { background: var(--amber-bg); color: var(--amber-text); }
     .neutral { background: var(--neutral-bg); color: var(--neutral-text); }
 
-    a {
-      display: block;
-      margin-top: 14px;
-      color: var(--accent);
-      text-decoration: none;
+    /* ================== PERFORMANCE NAVIGATION ================== */
+    .performance-nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .performance-nav.single {
+      grid-template-columns: 1fr;
+    }
+
+    .performance-item-title {
+      font-size: 14px;
+      color: var(--text);
       font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .performance-direction {
+      font-size: 13px;
+      color: var(--green-text);
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .performance-link {
+      display: block;
+      margin-top: 0;
+      background: var(--neutral-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: bold;
+      text-align: center;
       font-size: 14px;
     }
 
-    a:hover { text-decoration: underline; }
+    .performance-link:hover {
+      text-decoration: underline;
+    }
 
     .footer {
       max-width: 1100px;
@@ -120,15 +187,16 @@
 
     /* ================== RESPONSIVE ================== */
     @media (max-width: 900px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
+      .grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 520px) {
       body { padding: 14px; }
       h1 { font-size: 26px; }
       .intro { font-size: 14px; margin-bottom: 18px; }
-      .grid { grid-template-columns: 1fr; }
       .card { min-height: 135px; }
+      .theme-title { font-size: 23px; }
+      .performance-nav { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -140,122 +208,361 @@
 
   <!-- ================== INTRO TEXT ================== -->
   <p class="intro">
-    KPI view linking environmental performance to actions and behaviour.
+    Explore environmental performance, targets, and actions across Absa operations.
   </p>
 
-  <!-- ================== KPI GRID START ================== -->
+  <!-- ================== THEME GRID START ================== -->
   <div class="grid">
 
-    <!-- ================== ENERGY ================== -->
-    <div class="card">
-      <h2>Energy Consumption</h2>
-      <div class="value">177.3 GWh</div>
-      <div class="status good">35% below 2018 baseline</div>
+    <!-- ================== ENERGY MANAGEMENT ================== -->
+    <section class="card">
+      <h2 class="theme-title">Energy Management</h2>
+      <div class="label">Managing operational energy consumption, improving efficiency, and increasing renewable energy contribution across Absa operations.</div>
 
-      <!-- Mini trend graph -->
-      <div class="line">
+      <div class="featured-kpi">
+        <div class="featured-label">Featured KPI</div>
+        <div class="featured-title">Renewable Energy</div>
+        <div class="value">2.1%</div>
+        <div class="status good">Increasing renewable contribution</div>
+
+        <div class="line">
+          <svg viewBox="0 0 220 60" preserveAspectRatio="none">
+            <polyline points="0,50 40,48 80,45 120,47 160,40 200,26" fill="none" stroke="#18864b" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="label">Renewable energy performance reflects the increasing contribution of renewable electricity within total operational energy consumption.</div>
+      </div>
+
+      <div class="performance-nav">
+        <div>
+          <div class="performance-item-title">Energy Consumption</div>
+          <div class="performance-direction">↓ Use is reducing</div>
+          <a class="performance-link" href="energy.html">View performance →</a>
+        </div>
+        <div>
+          <div class="performance-item-title">Renewable Energy</div>
+          <div class="performance-direction">↑ Share is increasing</div>
+          <a class="performance-link" href="renewable.html">View performance →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== CLIMATE AND EMISSIONS ================== -->
+    <section class="card">
+      <h2 class="theme-title">Climate &amp; Emissions</h2>
+      <div class="label">Managing operational greenhouse gas emissions and supporting decarbonisation across Absa operations.</div>
+
+      <div class="featured-kpi">
+        <div class="featured-label">Featured KPI</div>
+        <div class="featured-title">GHG Emissions</div>
+        <div class="value">139,008 tCO₂e</div>
+        <div class="status good">37% below baseline</div>
+
+        <div class="line">
+          <svg viewBox="0 0 220 60" preserveAspectRatio="none">
+            <polyline points="0,10 40,34 80,24 120,30 160,36 200,48" fill="none" stroke="#18864b" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="label">GHG emissions performance reflects progress in reducing operational emissions against the baseline and target pathway.</div>
+      </div>
+
+      <div class="performance-nav single">
+        <div>
+          <div class="performance-item-title">GHG Emissions</div>
+          <div class="performance-direction">↓ Operational emissions are reducing</div>
+          <a class="performance-link" href="ghg.html">View performance →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== WASTE AND MATERIALS ================== -->
+    <section class="card">
+      <h2 class="theme-title">Waste &amp; Materials</h2>
+      <div class="label">Reducing waste generation, improving resource efficiency, and increasing diversion from landfill.</div>
+
+      <div class="featured-kpi">
+        <div class="featured-label">Featured KPI</div>
+        <div class="featured-title">Waste Diverted</div>
+        <div class="value">70%</div>
+        <div class="status good">Improving</div>
+
+        <div class="line">
+          <svg viewBox="0 0 220 60" preserveAspectRatio="none">
+            <polyline points="0,42 40,48 80,44 120,38 160,30 200,18" fill="none" stroke="#18864b" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="label">Waste diverted performance reflects the proportion of waste recycled or composted rather than sent to landfill.</div>
+      </div>
+
+      <div class="performance-nav">
+        <div>
+          <div class="performance-item-title">Waste Diverted</div>
+          <div class="performance-direction">↑ Landfill diversion is improving</div>
+          <a class="performance-link" href="waste.html">View performance →</a>
+        </div>
+        <div>
+          <div class="performance-item-title">Paper Use</div>
+          <div class="performance-direction">↓ Consumption is reducing</div>
+          <a class="performance-link" href="paper.html">View performance →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================== WATER MANAGEMENT ================== -->
+    <section class="card">
+      <h2 class="theme-title">Water Management</h2>
+      <div class="label">Managing operational water consumption and improving water efficiency across Absa facilities.</div>
+
+      <div class="featured-kpi">
+        <div class="featured-label">Featured KPI</div>
+        <div class="featured-title">Water Consumption</div>
+        <div class="value">286,450 kL</div>
+        <div class="status watch">2030 target pathway</div>
+
+        <div class="line">
+          <svg viewBox="0 0 220 60" preserveAspectRatio="none">
+            <polyline points="0,14 40,34 80,48 120,50 160,52 200,54" fill="none" stroke="#18864b" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="label">Water performance reflects the updated pathway for reducing operational water consumption and improving intensity.</div>
+      </div>
+
+      <div class="performance-nav single">
+        <div>
+          <div class="performance-item-title">Water Consumption</div>
+          <div class="performance-direction">↓ Water demand is reducing</div>
+          <a class="performance-link" href="water.html">View performance →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- ================== THEME GRID END ================== -->
+
+<!-- ================== SUSTAINABLE WORKPLACES FEATURE BLOCK ================== -->
+<section style="
+  max-width:1100px;
+  margin:16px auto 0;
+  padding:22px;
+  border-radius:18px;
+  background:#faf5f5;
+  border:1px solid #ead6d6;
+  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+">
+
+  <!-- ================== SECTION TITLE ================== -->
+  <h2 style="font-size:26px; margin:0 0 8px; text-align:center;">
+    Sustainable Workplaces
+  </h2>
+
+  <!-- ================== SECTION DESCRIPTION ================== -->
+  <div class="label" style="max-width:780px; margin:0 auto 20px; text-align:center; line-height:1.45;">
+    CRES is improving the environmental quality and performance of Absa’s buildings and workplace environments, creating more sustainable spaces for colleagues, customers and visitors.
+  </div>
+
+  <!-- ================== THREE COLUMN SHOWCASE GRID ================== -->
+  <div style="
+    display:grid;
+    grid-template-columns:1.1fr 1fr 1.1fr;
+    gap:14px;
+    align-items:stretch;
+  ">
+
+    <!-- ================== CERTIFIED GREEN SPACES KPI ================== -->
+    <div style="
+      background:#ffffff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.035);
+    ">
+
+      <div style="
+        font-size:12px;
+        color:var(--muted);
+        font-weight:bold;
+        text-transform:uppercase;
+        letter-spacing:0.05em;
+        margin-bottom:8px;
+      ">
+        Featured KPI
+      </div>
+
+      <div style="font-size:22px; font-weight:bold; margin-bottom:4px;">
+        Certified Green Spaces
+      </div>
+
+      <div class="value" style="margin-bottom:6px;">
+        33%
+      </div>
+
+      <div class="status good">
+        2030 portfolio target
+      </div>
+
+      <!-- ================== MINI GRAPH ================== -->
+      <div class="line" style="margin-top:14px;">
         <svg viewBox="0 0 220 60" preserveAspectRatio="none">
-          <polyline points="0,10 40,24 80,44 120,45 160,43 200,42"
-            fill="none" stroke="#18864b" stroke-width="4" stroke-linecap="round"/>
-          <line x1="0" y1="38" x2="220" y2="38"
-            stroke="#9f1d20" stroke-width="2" stroke-dasharray="5,5"/>
+          <polyline points="0,52 40,46 80,38 120,30 160,22 200,14"
+            fill="none"
+            stroke="#18864b"
+            stroke-width="4"
+            stroke-linecap="round"/>
         </svg>
       </div>
 
-      <a href="energy.html">View energy →</a>
+      <div class="label" style="margin-top:10px;">
+        Certified Green Spaces tracks progress toward increasing the certified share of Absa’s property portfolio.
+      </div>
+
+      <div style="font-size:13px; color:var(--green-text); font-weight:bold; margin-top:10px;">
+        ↑ Certified workplace coverage is increasing
+      </div>
+
+      <a href="green_spaces.html"
+        style="
+          display:block;
+          margin-top:12px;
+          background:#eef2f6;
+          border:1px solid var(--border);
+          border-radius:12px;
+          padding:14px;
+          text-decoration:none;
+          color:var(--text);
+          font-weight:bold;
+          text-align:center;
+          font-size:14px;
+        ">
+        View performance →
+      </a>
+
     </div>
 
-    <!-- ================== RENEWABLE ENERGY ================== -->
-    <div class="card">
-      <h2>Renewable Energy</h2>
-      <div class="value">2.1%</div>
-      <div class="status good">Increasing</div>
+    <!-- ================== CRES WORKPLACE PROGRESS ================== -->
+    <div style="
+      display:grid;
+      grid-template-rows:1fr 1fr;
+      gap:12px;
+    ">
 
-      <!-- Mini trend graph -->
-      <div class="line">
-        <svg viewBox="0 0 220 60" preserveAspectRatio="none">
-          <polyline points="0,50 40,48 80,45 120,47 160,40 200,26"
-            fill="none" stroke="#18864b" stroke-width="4" stroke-linecap="round"/>
-        </svg>
+      <!-- ================== CERTIFIED BUILDINGS ================== -->
+      <div style="
+        background:#ffffff;
+        border:1px solid var(--border);
+        border-radius:14px;
+        padding:14px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.035);
+      ">
+        <h3 style="margin:0 0 8px; font-size:16px;">Certified Buildings</h3>
+        <p style="margin:0; color:var(--muted); font-size:13px; line-height:1.35;">
+          Building certifications recognise environmental performance across design, operations and workplace quality.
+        </p>
       </div>
 
-      <a href="renewable.html">View renewables →</a>
+      <!-- ================== BETTER WORKPLACE PERFORMANCE ================== -->
+      <div style="
+        background:#ffffff;
+        border:1px solid var(--border);
+        border-radius:14px;
+        padding:14px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.035);
+      ">
+        <h3 style="margin:0 0 8px; font-size:16px;">Better Workplace Performance</h3>
+        <p style="margin:0; color:var(--muted); font-size:13px; line-height:1.35;">
+          CRES connects buildings to practical environmental outcomes, including energy, water, waste and occupant engagement.
+        </p>
+      </div>
+
     </div>
 
-    <!-- ================== GHG ================== -->
-    <div class="card">
-      <h2>GHG Emissions</h2>
-      <div class="value">139,008 tCO₂e</div>
-      <div class="status good">37% below baseline</div>
+    <!-- ================== FEATURED BUILDING PERFORMANCE ================== -->
+    <div style="
+      background:#ffffff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.035);
+    ">
 
-      <!-- Mini trend graph -->
-      <div class="line">
-        <svg viewBox="0 0 220 60" preserveAspectRatio="none">
-          <polyline points="0,10 40,34 80,24 120,30 160,36 200,48"
-            fill="none" stroke="#18864b" stroke-width="4" stroke-linecap="round"/>
-        </svg>
+      <div style="
+        font-size:12px;
+        color:var(--muted);
+        font-weight:bold;
+        text-transform:uppercase;
+        letter-spacing:0.05em;
+        margin-bottom:8px;
+      ">
+        Featured Building
       </div>
 
-      <a href="ghg.html">View emissions →</a>
-    </div>
-
-    <!-- ================== WATER ================== -->
-    <div class="card">
-      <h2>Water Consumption</h2>
-      <div class="value">270,667 kl</div>
-      <div class="status neutral">Baseline developing</div>
-
-      <!-- Mini trend graph -->
-      <div class="line">
-        <svg viewBox="0 0 220 60" preserveAspectRatio="none">
-          <line x1="0" y1="34" x2="220" y2="34"
-            stroke="#667085" stroke-width="4" stroke-linecap="round"/>
-        </svg>
+      <div style="font-size:22px; font-weight:bold; margin-bottom:4px;">
+        15 Alice Lane
       </div>
 
-      <a href="water.html">View water →</a>
-    </div>
-
-    <!-- ================== WASTE ================== -->
-    <div class="card">
-      <h2>Waste Diverted</h2>
-      <div class="value">70%</div>
-      <div class="status good">Improving</div>
-
-      <!-- Mini trend graph -->
-      <div class="line">
-        <svg viewBox="0 0 220 60" preserveAspectRatio="none">
-          <polyline points="0,42 40,48 80,44 120,38 160,30 200,18"
-            fill="none" stroke="#18864b" stroke-width="4" stroke-linecap="round"/>
-        </svg>
+      <div class="label" style="margin-bottom:12px;">
+        A future building-level view showing how major corporate buildings can display their own environmental performance.
       </div>
 
-      <a href="waste.html">View waste →</a>
-    </div>
+      <!-- ================== BUILDING METRICS ================== -->
+      <div style="
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+        margin-bottom:12px;
+      ">
 
-    <!-- ================== PAPER ================== -->
-    <div class="card">
-      <h2>Paper Use</h2>
-      <div class="value">195 t</div>
-      <div class="status good">84% reduction</div>
+        <div style="background:#f8fafc; border:1px solid var(--border); border-radius:10px; padding:10px;">
+          <div style="font-size:12px; color:var(--muted);">Energy</div>
+          <div style="font-size:16px; font-weight:bold;">1.87 GWh</div>
+        </div>
 
-      <!-- Mini trend graph -->
-      <div class="line">
-        <svg viewBox="0 0 220 60" preserveAspectRatio="none">
-          <polyline points="0,8 40,18 80,20 120,34 160,44 200,52"
-            fill="none" stroke="#18864b" stroke-width="4" stroke-linecap="round"/>
-        </svg>
+        <div style="background:#f8fafc; border:1px solid var(--border); border-radius:10px; padding:10px;">
+          <div style="font-size:12px; color:var(--muted);">Water</div>
+          <div style="font-size:16px; font-weight:bold;">10,403 kL</div>
+        </div>
+
+        <div style="background:#f8fafc; border:1px solid var(--border); border-radius:10px; padding:10px;">
+          <div style="font-size:12px; color:var(--muted);">GHG</div>
+          <div style="font-size:16px; font-weight:bold;">1,879 tCO₂e</div>
+        </div>
+
+        <div style="background:#f8fafc; border:1px solid var(--border); border-radius:10px; padding:10px;">
+          <div style="font-size:12px; color:var(--muted);">Certified area</div>
+          <div style="font-size:16px; font-weight:bold;">17,543 m²</div>
+        </div>
+
       </div>
 
-      <a href="paper.html">View paper →</a>
+      <a href="building.html"
+        style="
+          display:block;
+          margin-top:0;
+          background:#eef2f6;
+          border:1px solid var(--border);
+          border-radius:12px;
+          padding:14px;
+          text-decoration:none;
+          color:var(--text);
+          font-weight:bold;
+          text-align:center;
+          font-size:14px;
+        ">
+        Building Performance →
+      </a>
+
     </div>
 
   </div>
-  <!-- ================== KPI GRID END ================== -->
+
+</section>
 
   <!-- ================== FOOTER ================== -->
   <div class="footer">
-    Demo values based on 2018–2023 performance data estimates.
+    Demo values based on available environmental performance data and target pathways.
   </div>
 
 </body>
