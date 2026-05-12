@@ -188,8 +188,12 @@
     /* ================== RESPONSIVE ================== */
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
-    }
 
+      .workplace-grid {
+        grid-template-columns: 1fr !important;
+      }
+  }
+    
     @media (max-width: 520px) {
       body { padding: 14px; }
       h1 { font-size: 26px; }
@@ -365,7 +369,7 @@
   </div>
 
   <!-- ================== THREE COLUMN SHOWCASE GRID ================== -->
-  <div style="
+  <div class="workplace-grid" style="
     display:grid;
     grid-template-columns:1.1fr 1fr 1.1fr;
     gap:14px;
