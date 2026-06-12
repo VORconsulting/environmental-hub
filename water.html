@@ -270,19 +270,21 @@
 }
 
 /* ================== SPLASH TRANSITION CSS ================== */
-  .splash-transition {
+.splash-transition {
   position: fixed;
   inset: 0;
   z-index: 9999;
+
   background-image: url('192 DSCF3166_water_compressed.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: contain;
   background-color: black;
-  background-position: center 25%;
-  background-repeat: no-repeat;
-  animation: splashFade 1.2s ease-out forwards;
+
+  animation: splashFade 1.5s ease-out forwards;
   pointer-events: none;
 }
-
+  
 .splash-overlay {
   position: absolute;
   inset: 0;
