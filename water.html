@@ -260,10 +260,63 @@
       .counter { font-size: 30px; }
       .value { font-size: 26px; }
     }
+
+@media (max-width: 520px) {
+  body { padding: 14px; }
+  .hero { padding: 18px; }
+  .counter { font-size: 30px; }
+  .value { font-size: 26px; }
+}
+
+/* ================== SPLASH TRANSITION CSS ================== */
+  .splash-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-image: url('water-splash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: splashFade 1.1s ease-out forwards;
+  pointer-events: none;
+}
+
+.splash-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.18);
+}
+
+@keyframes splashFade {
+  0% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-transition {
+    animation: none;
+    display: none;
+  }
+}
+   
   </style>
 </head>
 
 <body>
+
+<!-- ================== SPLASH TRANSITION OVERLAY ================== -->
+  <div class="splash-transition" aria-hidden="true">
+    <div class="splash-overlay"></div>
+  </div>
+
   <div class="page">
 
     <!-- ================== BACK LINK ================== -->
