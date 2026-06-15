@@ -107,17 +107,14 @@
     <!-- ================== COUNTER AND RENEWABLE ENERGY BREAKDOWN ================== -->
     <section class="grid two">
       <div class="card">
-        <h2>Renewable Share Progress</h2>
+        <h2>Solar and Wind Renewable Energy</h2>
         <div class="counter" id="renewableCounter">0.0%</div>
         <div class="label">
-          Demo counter showing the 2023 renewable energy share as a proportion of total energy consumption.
-        </div>
-        <div class="counter-sub">
-          The number animates to the reported 2023 renewable share when the page loads.
-        </div>
+          Renewable electricity from self-generated solar and wind energy procurement in 2025.
+         </div>
         <div class="mini-metric">
-          <strong>Target gap</strong>
-          The 2023 renewable share remains below the 10% target level.
+          <strong>Solar and wind eneregy use is increasing</strong>
+          Includes 4.23 GWh from solar and 0.07 GWh from wind in 2025.
         </div>
       </div>
 
@@ -251,7 +248,7 @@
       counter.textContent = value.toLocaleString(undefined, {
         minimumFractionDigits: 1,
         maximumFractionDigits: 1
-      }) + "%";
+      }) + " GWh";
 
       if (progress < 1) {
         requestAnimationFrame(animateCounter);
