@@ -331,48 +331,69 @@
       </div>
     </section>
 
-    <!-- ================== PERFORMANCE TREND ================== -->
-    <section class="card">
-      <h2>Energy Consumption Trend</h2>
-      <div class="label">Illustrative trend based on available 2018–2025 performance information.</div>
+<!-- ================== PERFORMANCE TREND ================== -->
+<section class="card">
+  <h2>Energy Consumption Trend</h2>
+  <div class="label">Actual energy consumption from 2018 to 2025, shown against the 2025–2030 target pathway.</div>
 
-      <div class="chart">
-        <svg viewBox="0 0 700 300" preserveAspectRatio="xMidYMid meet">
-          <line x1="55" y1="250" x2="670" y2="250" stroke="#d9e1e8" stroke-width="2"/>
-          <line x1="55" y1="35" x2="55" y2="250" stroke="#d9e1e8" stroke-width="2"/>
-          <line x1="55" y1="205" x2="670" y2="205" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="55" y1="160" x2="670" y2="160" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="55" y1="115" x2="670" y2="115" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="55" y1="70" x2="670" y2="70" stroke="#eef2f6" stroke-width="1"/>
+  <div class="chart">
+    <svg viewBox="0 0 700 300" preserveAspectRatio="xMidYMid meet">
+      <line x1="55" y1="250" x2="670" y2="250" stroke="#d9e1e8" stroke-width="2"/>
+      <line x1="55" y1="35" x2="55" y2="250" stroke="#d9e1e8" stroke-width="2"/>
 
-          <polyline points="55,45 363,117 670,163" fill="none" stroke="#9f1d20" stroke-width="4" stroke-dasharray="8,7" stroke-linecap="round"/>
-          <polyline points="55,45 116,88 178,155 240,169 301,171 363,172" fill="none" stroke="#18864b" stroke-width="5" stroke-linecap="round"/>
+      <line x1="55" y1="205" x2="670" y2="205" stroke="#eef2f6" stroke-width="1"/>
+      <line x1="55" y1="160" x2="670" y2="160" stroke="#eef2f6" stroke-width="1"/>
+      <line x1="55" y1="115" x2="670" y2="115" stroke="#eef2f6" stroke-width="1"/>
+      <line x1="55" y1="70" x2="670" y2="70" stroke="#eef2f6" stroke-width="1"/>
 
-          <circle cx="55" cy="45" r="5" fill="#18864b"/>
-          <circle cx="116" cy="88" r="5" fill="#18864b"/>
-          <circle cx="178" cy="155" r="5" fill="#18864b"/>
-          <circle cx="240" cy="169" r="5" fill="#18864b"/>
-          <circle cx="301" cy="171" r="5" fill="#18864b"/>
-          <circle cx="363" cy="172" r="5" fill="#18864b"/>
+      <!-- Target pathway: 2025 to 2030 -->
+      <polyline
+        points="414,127 465,139 516,150 568,158 619,166 670,173"
+        fill="none"
+        stroke="#95052A"
+        stroke-width="4"
+        stroke-dasharray="8,7"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
-          <text x="55" y="275" text-anchor="middle" font-size="13" fill="#667085">2018</text>
-          <text x="116" y="275" text-anchor="middle" font-size="13" fill="#667085">2019</text>
-          <text x="178" y="275" text-anchor="middle" font-size="13" fill="#667085">2020</text>
-          <text x="240" y="275" text-anchor="middle" font-size="13" fill="#667085">2021</text>
-          <text x="301" y="275" text-anchor="middle" font-size="13" fill="#667085">2022</text>
-          <text x="363" y="275" text-anchor="middle" font-size="13" fill="#667085">2023</text>
-          <text x="670" y="275" text-anchor="middle" font-size="13" fill="#667085">2030</text>
+      <!-- Actual performance: 2018 to 2025 -->
+      <polyline
+        points="55,46 106,132 158,191 209,190 260,201 311,193 362,223 414,236"
+        fill="none"
+        stroke="#18864b"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
-          <text x="380" y="104" font-size="13" fill="#9f1d20">2030 target path</text>
-          <text x="382" y="188" font-size="13" fill="#18864b">Actual performance</text>
-        </svg>
-      </div>
+      <circle cx="55" cy="46" r="5" fill="#18864b"/>
+      <circle cx="106" cy="132" r="5" fill="#18864b"/>
+      <circle cx="158" cy="191" r="5" fill="#18864b"/>
+      <circle cx="209" cy="190" r="5" fill="#18864b"/>
+      <circle cx="260" cy="201" r="5" fill="#18864b"/>
+      <circle cx="311" cy="193" r="5" fill="#18864b"/>
+      <circle cx="362" cy="223" r="5" fill="#18864b"/>
+      <circle cx="414" cy="236" r="5" fill="#18864b"/>
 
-      <div class="legend">
-        <span>Actual performance</span>
-        <span class="target">Target path</span>
-      </div>
-    </section>
+      <text x="55" y="275" text-anchor="middle" font-size="13" fill="#667085">2018</text>
+      <text x="106" y="275" text-anchor="middle" font-size="13" fill="#667085">2019</text>
+      <text x="158" y="275" text-anchor="middle" font-size="13" fill="#667085">2020</text>
+      <text x="209" y="275" text-anchor="middle" font-size="13" fill="#667085">2021</text>
+      <text x="260" y="275" text-anchor="middle" font-size="13" fill="#667085">2022</text>
+      <text x="311" y="275" text-anchor="middle" font-size="13" fill="#667085">2023</text>
+      <text x="362" y="275" text-anchor="middle" font-size="13" fill="#667085">2024</text>
+      <text x="414" y="275" text-anchor="middle" font-size="13" fill="#667085">2025</text>
+      <text x="670" y="275" text-anchor="middle" font-size="13" fill="#667085">2030</text>
+
+      <text x="430" y="115" font-size="13" fill="#95052A">Target pathway</text>
+      <text x="390" y="245" font-size="13" fill="#18864b">Actual performance</text>
+    </svg>
+  </div>
+
+  <div class="legend">
+    <span>Actual performance</span>
+    <span class="target">Target pathway</span>
+  </div>
+</section>
 
     <!-- ================== FEATURED PROJECTS ================== -->
     <section class="card" style="margin-top:16px;">
