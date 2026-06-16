@@ -305,20 +305,33 @@
     <!-- ================== COUNTER AND EMISSIONS SOURCE BREAKDOWN ================== -->
     <section class="grid two">
       <div class="card">
-        <h2>Estimated Emissions Avoided</h2>
+        <h2>Estimated Cumulative Emissions Avoided</h2>
         <div class="counter" id="ghgCounter">0 tCO₂e</div>
         <div class="label">
-          Demo counter showing estimated annual emissions avoided in 2023 relative to the 2018 baseline.
+          Cumulative reduction in reported greenhouse gas emissions relative to the 2018 baseline, accumulated from 2019 to 2025.
         </div>
-        <div class="counter-sub">
-          The number animates to the estimated annual avoided emissions when the page loads.
-        </div>
-        <div class="mini-metric">
-          <strong>Performance context</strong>
-          2023 emissions are approximately 37% below the 2018 baseline.
-        </div>
+      <div class="mini-metric">
+       <strong>Reduction of GHG emission sources:</strong>
+       <p style="margin:0 0 6px;">
+        Reported greenhouse gas emissions decreased by 122,920 tCO₂e relative to the 2018 baseline.
+       </p>
+       <p style="margin:0 0 4px;">
+        Electricity emissions were 99,716 tCO₂e lower than the 2018 baseline.
+       </p>
+       <p style="margin:0 0 4px;">
+        Natural gas emissions were 10,879 tCO₂e lower than the 2018 baseline.
+       </p>
+       <p style="margin:0 0 4px;">
+        Travel emissions were 6,799 tCO₂e lower than the 2018 baseline.
+       </p>
+       <p style="margin:0 0 4px;">
+        Vehicle fuel emissions were 1,890 tCO₂e lower than the 2018 baseline.
+       </p>
+       <p style="margin:0;">
+        Diesel emissions were 1,585 tCO₂e higher than the 2018 baseline.
+       </p>
       </div>
-
+      
       <div class="card">
         <h2>Key Emissions Drivers</h2>
         <div class="source-list">
@@ -429,15 +442,15 @@
 
     <!-- ================== FOOTER ================== -->
     <div class="footer">
-      Demo page based on available 2018–2023 GHG performance information.
+      Values based on 2018–2025 GHG performance information.
     </div>
 
   </div>
 
   <!-- ================== DEMO COUNTER SCRIPT ================== -->
   <script>
-    const startValue = 75000;
-    const targetValue = 81656;
+    const startValue = 0;
+    const targetValue = 745122;
     const duration = 12000;
     const start = performance.now();
     const counter = document.getElementById("ghgCounter");
