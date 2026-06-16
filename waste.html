@@ -284,7 +284,7 @@
 <section class="grid">
   <div class="card">
     <h2>2025 Waste Diverted from Landfill</h2>
-    <div class="value">1394 tonnes</div>
+    <div class="value">1,394 tonnes</div>
     <div class="label">Tonnes of waste recycled or composted rather than sent to landfill.</div>
   </div>
 
@@ -303,20 +303,18 @@
 </section>
     
     <!-- ================== COUNTER AND WASTE PATHWAY BREAKDOWN ================== -->
+    
     <section class="grid two">
       <div class="card">
-        <h2>Waste Diverted from Landfill</h2>
-        <div class="counter" id="wasteCounter">0.0%</div>
+        <h2>Cumulative Waste Diverted from Landfill</h2>
+        <div class="counter" id="wasteCounter">0 tonnes</div>
         <div class="label">
-          Demo counter showing the 2023 proportion of waste diverted from landfill through recycling or composting.
-        </div>
-        <div class="counter-sub">
-          The number animates to the reported 2023 diversion rate when the page loads.
-        </div>
-        <div class="mini-metric">
-          <strong>2018 baseline</strong>
-          Waste diversion improved from 57% in 2018 to 70% in 2023.
-        </div>
+         Total waste recycled or composted rather than sent to landfill from 2018 to 2025.
+      </div>
+      <div class="mini-metric">
+       <strong>2025 performance</strong>
+        In 2025, Absa diverted 1,394 tonnes of waste from landfill.
+      </div>
       </div>
 
       <div class="card">
@@ -325,7 +323,6 @@
           <div class="source"><strong>Recycled waste</strong>Materials recovered for reuse or recycling</div>
           <div class="source"><strong>Composted waste</strong>Organic waste diverted from landfill</div>
           <div class="source"><strong>Landfilled waste</strong>Residual waste sent to landfill</div>
-          <div class="source"><strong>Performance focus</strong>Increasing diversion and reducing landfill dependency</div>
         </div>
       </div>
     </section>
@@ -431,8 +428,8 @@
 
   <!-- ================== DEMO COUNTER SCRIPT ================== -->
   <script>
-    const startValue = 57.0;
-    const targetValue = 70.0;
+    const startValue = 0;
+    const targetValue = 7931;
     const duration = 12000;
     const start = performance.now();
     const counter = document.getElementById("wasteCounter");
@@ -443,8 +440,8 @@
       const value = startValue + (targetValue - startValue) * eased;
 
       counter.textContent = value.toLocaleString(undefined, {
-        minimumFractionDigits: 1,
-        maximumFractionDigits: 1
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
       }) + "%";
 
       if (progress < 1) {
