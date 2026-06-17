@@ -359,50 +359,89 @@
     <!-- ================== PERFORMANCE TREND ================== -->
     <section class="card">
       <h2>Paper Use Trend</h2>
-      <div class="label">Illustrative trend based on available 2018–2023 paper performance information.</div>
+      <div class="label">Annual paper consumption from 2018 to 2025, shown against the approved 2018–2030 target pathway.</div>
 
       <div class="chart">
-        <svg viewBox="0 0 700 300" preserveAspectRatio="xMidYMid meet">
-          <line x1="55" y1="250" x2="670" y2="250" stroke="#d9e1e8" stroke-width="2"/>
-          <line x1="55" y1="35" x2="55" y2="250" stroke="#d9e1e8" stroke-width="2"/>
-          <line x1="55" y1="205" x2="670" y2="205" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="55" y1="160" x2="670" y2="160" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="55" y1="115" x2="670" y2="115" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="55" y1="70" x2="670" y2="70" stroke="#eef2f6" stroke-width="1"/>
+        <svg viewBox="0 0 700 330" preserveAspectRatio="xMidYMid meet">
 
-          <polyline points="55,45 116,75 178,68 240,125 301,180 363,218" fill="none" stroke="#18864b" stroke-width="5" stroke-linecap="round"/>
-          <polyline points="55,45 363,145 670,235" fill="none" stroke="#9f1d20" stroke-width="4" stroke-dasharray="8,7" stroke-linecap="round"/>
+          <!-- Axes -->
+          <line x1="70" y1="280" x2="670" y2="280" stroke="#d9e1e8" stroke-width="2"/>
+          <line x1="70" y1="35" x2="70" y2="280" stroke="#d9e1e8" stroke-width="2"/>
 
-          <circle cx="55" cy="45" r="5" fill="#18864b"/>
-          <circle cx="116" cy="75" r="5" fill="#18864b"/>
-          <circle cx="178" cy="68" r="5" fill="#18864b"/>
-          <circle cx="240" cy="125" r="5" fill="#18864b"/>
-          <circle cx="301" cy="180" r="5" fill="#18864b"/>
-          <circle cx="363" cy="218" r="5" fill="#18864b"/>
+          <!-- Grid lines -->
+          <line x1="70" y1="228" x2="670" y2="228" stroke="#eef2f6" stroke-width="1"/>
+          <line x1="70" y1="175" x2="670" y2="175" stroke="#eef2f6" stroke-width="1"/>
+          <line x1="70" y1="123" x2="670" y2="123" stroke="#eef2f6" stroke-width="1"/>
+          <line x1="70" y1="70" x2="670" y2="70" stroke="#eef2f6" stroke-width="1"/>
 
-          <text x="55" y="275" text-anchor="middle" font-size="13" fill="#667085">2018</text>
-          <text x="116" y="275" text-anchor="middle" font-size="13" fill="#667085">2019</text>
-          <text x="178" y="275" text-anchor="middle" font-size="13" fill="#667085">2020</text>
-          <text x="240" y="275" text-anchor="middle" font-size="13" fill="#667085">2021</text>
-          <text x="301" y="275" text-anchor="middle" font-size="13" fill="#667085">2022</text>
-          <text x="363" y="275" text-anchor="middle" font-size="13" fill="#667085">2023</text>
-          <text x="670" y="275" text-anchor="middle" font-size="13" fill="#667085">2030</text>
+          <!-- Y-axis labels -->
+          <text x="58" y="284" text-anchor="end" font-size="12" fill="#667085">0 t</text>
+          <text x="58" y="232" text-anchor="end" font-size="12" fill="#667085">300 t</text>
+          <text x="58" y="179" text-anchor="end" font-size="12" fill="#667085">600 t</text>
+          <text x="58" y="127" text-anchor="end" font-size="12" fill="#667085">900 t</text>
+          <text x="58" y="74" text-anchor="end" font-size="12" fill="#667085">1,200 t</text>
+          <text x="58" y="40" text-anchor="end" font-size="12" fill="#667085">1,400 t</text>
 
-          <text x="382" y="198" font-size="13" fill="#18864b">Actual performance</text>
-          <text x="382" y="142" font-size="13" fill="#9f1d20">Illustrative reduction path</text>
+          <!-- Target pathway: 2018 to 2030 -->
+          <polyline
+            points="70,37 120,42 170,47 220,52 270,62 320,72 370,81 420,91 470,100 520,115 570,130 620,144 670,159"
+            fill="none"
+            stroke="#95052A"
+            stroke-width="4"
+            stroke-dasharray="8,7"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+          <!-- Actual performance: 2018 to 2025 -->
+          <polyline
+            points="70,37 120,100 170,140 220,177 270,203 320,246 370,244 420,253"
+            fill="none"
+            stroke="#18864b"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+          <!-- Actual performance points -->
+          <circle cx="70" cy="37" r="5" fill="#18864b"/>
+          <circle cx="120" cy="100" r="5" fill="#18864b"/>
+          <circle cx="170" cy="140" r="5" fill="#18864b"/>
+          <circle cx="220" cy="177" r="5" fill="#18864b"/>
+          <circle cx="270" cy="203" r="5" fill="#18864b"/>
+          <circle cx="320" cy="246" r="5" fill="#18864b"/>
+          <circle cx="370" cy="244" r="5" fill="#18864b"/>
+          <circle cx="420" cy="253" r="5" fill="#18864b"/>
+
+          <!-- X-axis labels -->
+          <text x="70" y="305" text-anchor="middle" font-size="12" fill="#667085">2018</text>
+          <text x="120" y="305" text-anchor="middle" font-size="12" fill="#667085">2019</text>
+          <text x="170" y="305" text-anchor="middle" font-size="12" fill="#667085">2020</text>
+          <text x="220" y="305" text-anchor="middle" font-size="12" fill="#667085">2021</text>
+          <text x="270" y="305" text-anchor="middle" font-size="12" fill="#667085">2022</text>
+          <text x="320" y="305" text-anchor="middle" font-size="12" fill="#667085">2023</text>
+          <text x="370" y="305" text-anchor="middle" font-size="12" fill="#667085">2024</text>
+          <text x="420" y="305" text-anchor="middle" font-size="12" fill="#667085">2025</text>
+          <text x="470" y="305" text-anchor="middle" font-size="12" fill="#667085">2026</text>
+          <text x="520" y="305" text-anchor="middle" font-size="12" fill="#667085">2027</text>
+          <text x="570" y="305" text-anchor="middle" font-size="12" fill="#667085">2028</text>
+          <text x="620" y="305" text-anchor="middle" font-size="12" fill="#667085">2029</text>
+          <text x="670" y="305" text-anchor="middle" font-size="12" fill="#667085">2030</text>
+
+          <!-- Line labels -->
+          <text x="455" y="82" font-size="13" fill="#95052A">Target pathway</text>
+          <text x="385" y="242" font-size="13" fill="#18864b">Actual performance</text>
         </svg>
       </div>
 
       <div class="legend">
         <span>Actual performance</span>
-        <span class="target">Illustrative reduction path</span>
+        <span class="target">Target pathway</span>
       </div>
     </section>
 
     <!-- ================== FEATURED PROJECTS ================== -->
     <section class="card" style="margin-top:16px;">
       <h2>Featured Project Areas</h2>
-      <div class="label">Example action areas that can support continued reduction in paper use.</div>
+      <div class="label">Project themes that can support continued reduction in paper use.</div>
 
       <div class="projects" style="margin-top:12px;">
         <div class="project-card">
@@ -450,12 +489,12 @@
 
     <!-- ================== FOOTER ================== -->
     <div class="footer">
-      Demo page based on available 2018–2023 paper performance information.
+      Values are based on 2018–2023 paper use performance information.
     </div>
 
   </div>
 
-  <!-- ================== DEMO COUNTER SCRIPT ================== -->
+  <!-- ================== COUNTER SCRIPT ================== -->
   <script>
     const startValue = 0;
     const targetValue = 6297.09;
