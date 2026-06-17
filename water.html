@@ -359,82 +359,75 @@
       </div>
     </section>
 
-    <!-- ================== PERFORMANCE TREND ================== -->
-    <section class="card">
-      <h2>Water Consumption Trend</h2>
-      <div class="label">Annual water consumption (kL) from 2020 to 2025, shown against the approved 2024–2030 target pathway.</div>
+<!-- ================== PERFORMANCE TREND ================== -->
+<section class="card">
+  <h2>Water Consumption Trend</h2>
+  <div class="label">Annual water consumption (kL) from the 2024 baseline to 2025, shown against the approved 2024–2030 target pathway.</div>
 
-      <div class="chart">
-        <svg viewBox="0 0 700 330" preserveAspectRatio="xMidYMid meet">
+  <div class="chart">
+    <svg viewBox="0 0 700 330" preserveAspectRatio="xMidYMid meet">
 
-          <!-- Axes -->
-          <line x1="70" y1="280" x2="670" y2="280" stroke="#d9e1e8" stroke-width="2"/>
-          <line x1="70" y1="35" x2="70" y2="280" stroke="#d9e1e8" stroke-width="2"/>
+      <!-- Axes -->
+      <line x1="70" y1="280" x2="670" y2="280" stroke="#d9e1e8" stroke-width="2"/>
+      <line x1="70" y1="35" x2="70" y2="280" stroke="#d9e1e8" stroke-width="2"/>
 
-          <!-- Grid lines -->
-          <line x1="70" y1="210" x2="670" y2="210" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="70" y1="140" x2="670" y2="140" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="70" y1="70" x2="670" y2="70" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="70" y1="35" x2="670" y2="35" stroke="#eef2f6" stroke-width="1"/>
+      <!-- Grid lines -->
+      <line x1="70" y1="210" x2="670" y2="210" stroke="#eef2f6" stroke-width="1"/>
+      <line x1="70" y1="140" x2="670" y2="140" stroke="#eef2f6" stroke-width="1"/>
+      <line x1="70" y1="70" x2="670" y2="70" stroke="#eef2f6" stroke-width="1"/>
+      <line x1="70" y1="35" x2="670" y2="35" stroke="#eef2f6" stroke-width="1"/>
 
-          <!-- Y-axis labels -->
-          <text x="58" y="284" text-anchor="end" font-size="12" fill="#667085">0 kL</text>
-          <text x="58" y="214" text-anchor="end" font-size="12" fill="#667085">100k</text>
-          <text x="58" y="144" text-anchor="end" font-size="12" fill="#667085">200k</text>
-          <text x="58" y="74" text-anchor="end" font-size="12" fill="#667085">300k</text>
-          <text x="58" y="39" text-anchor="end" font-size="12" fill="#667085">350k</text>
+      <!-- Y-axis labels -->
+      <text x="58" y="284" text-anchor="end" font-size="12" fill="#667085">0 kL</text>
+      <text x="58" y="214" text-anchor="end" font-size="12" fill="#667085">100k</text>
+      <text x="58" y="144" text-anchor="end" font-size="12" fill="#667085">200k</text>
+      <text x="58" y="74" text-anchor="end" font-size="12" fill="#667085">300k</text>
+      <text x="58" y="39" text-anchor="end" font-size="12" fill="#667085">350k</text>
 
-          <!-- Target pathway: 2024 to 2030 -->
-          <polyline
-            points="310,48 370,60 430,74 490,76 550,77 610,78 670,79"
-            fill="none"
-            stroke="#95052A"
-            stroke-width="4"
-            stroke-dasharray="8,7"
-            stroke-linecap="round"
-            stroke-linejoin="round"/>
+      <!-- Target pathway: 2024 to 2030 -->
+      <polyline
+        points="70,48 170,60 270,74 370,76 470,77 570,78 670,79"
+        fill="none"
+        stroke="#95052A"
+        stroke-width="4"
+        stroke-dasharray="8,7"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
-          <!-- Actual performance: 2020 to 2025 -->
-          <polyline
-            points="70,167 130,147 190,144 250,94 310,48 370,98"
-            fill="none"
-            stroke="#18864b"
-            stroke-width="5"
-            stroke-linecap="round"
-            stroke-linejoin="round"/>
+      <!-- Actual performance: 2024 to 2025 -->
+      <polyline
+        points="70,48 170,98"
+        fill="none"
+        stroke="#18864b"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
-          <!-- Actual performance points -->
-          <circle cx="70" cy="167" r="5" fill="#18864b"/>
-          <circle cx="130" cy="147" r="5" fill="#18864b"/>
-          <circle cx="190" cy="144" r="5" fill="#18864b"/>
-          <circle cx="250" cy="94" r="5" fill="#18864b"/>
-          <circle cx="310" cy="48" r="5" fill="#18864b"/>
-          <circle cx="370" cy="98" r="5" fill="#18864b"/>
+      <!-- Actual performance points -->
+      <circle cx="70" cy="48" r="5" fill="#18864b"/>
+      <circle cx="170" cy="98" r="5" fill="#18864b"/>
 
-          <!-- X-axis labels -->
-          <text x="70" y="305" text-anchor="middle" font-size="12" fill="#667085">2020</text>
-          <text x="130" y="305" text-anchor="middle" font-size="12" fill="#667085">2021</text>
-          <text x="190" y="305" text-anchor="middle" font-size="12" fill="#667085">2022</text>
-          <text x="250" y="305" text-anchor="middle" font-size="12" fill="#667085">2023</text>
-          <text x="310" y="305" text-anchor="middle" font-size="12" fill="#667085">2024</text>
-          <text x="370" y="305" text-anchor="middle" font-size="12" fill="#667085">2025</text>
-          <text x="430" y="305" text-anchor="middle" font-size="12" fill="#667085">2026</text>
-          <text x="490" y="305" text-anchor="middle" font-size="12" fill="#667085">2027</text>
-          <text x="550" y="305" text-anchor="middle" font-size="12" fill="#667085">2028</text>
-          <text x="610" y="305" text-anchor="middle" font-size="12" fill="#667085">2029</text>
-          <text x="670" y="305" text-anchor="middle" font-size="12" fill="#667085">2030</text>
+      <!-- X-axis labels -->
+      <text x="70" y="305" text-anchor="middle" font-size="12" fill="#667085">2024</text>
+      <text x="170" y="305" text-anchor="middle" font-size="12" fill="#667085">2025</text>
+      <text x="270" y="305" text-anchor="middle" font-size="12" fill="#667085">2026</text>
+      <text x="370" y="305" text-anchor="middle" font-size="12" fill="#667085">2027</text>
+      <text x="470" y="305" text-anchor="middle" font-size="12" fill="#667085">2028</text>
+      <text x="570" y="305" text-anchor="middle" font-size="12" fill="#667085">2029</text>
+      <text x="670" y="305" text-anchor="middle" font-size="12" fill="#667085">2030</text>
 
-          <!-- Line labels -->
-          <text x="440" y="62" font-size="13" fill="#95052A">Target pathway</text>
-          <text x="385" y="112" font-size="13" fill="#18864b">Actual performance</text>
-        </svg>
-      </div>
+      <!-- Line labels -->
+      <text x="295" y="62" font-size="13" fill="#95052A">Target pathway</text>
+      <text x="185" y="112" font-size="13" fill="#18864b">Actual performance</text>
 
-      <div class="legend">
-        <span>Actual performance</span>
-        <span class="target">Target pathway</span>
-      </div>
-    </section>
+    </svg>
+  </div>
+
+  <div class="legend">
+    <span>Actual performance</span>
+    <span class="target">Target pathway</span>
+  </div>
+</section>
 
     <!-- ================== FEATURED PROJECTS ================== -->
     <section class="card" style="margin-top:16px;">
