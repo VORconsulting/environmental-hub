@@ -332,40 +332,82 @@
 
     <!-- ================== PERFORMANCE TREND ================== -->
     <section class="card">
-      <h2>Certified Green Space Pathway</h2>
-      <div class="label">Illustrative annual pathway based on the 2025–2030 certified green space targets.</div>
+      <h2>Certified Green Space Trend</h2>
+      <div class="label">Annual certified green space performance (%) from 2018 to 2025, shown against the approved 2018–2030 target pathway.</div>
 
       <div class="chart">
-        <svg viewBox="0 0 700 300" preserveAspectRatio="xMidYMid meet">
-          <line x1="55" y1="250" x2="670" y2="250" stroke="#d9e1e8" stroke-width="2"/>
-          <line x1="55" y1="35" x2="55" y2="250" stroke="#d9e1e8" stroke-width="2"/>
-          <line x1="55" y1="205" x2="670" y2="205" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="55" y1="160" x2="670" y2="160" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="55" y1="115" x2="670" y2="115" stroke="#eef2f6" stroke-width="1"/>
-          <line x1="55" y1="70" x2="670" y2="70" stroke="#eef2f6" stroke-width="1"/>
+        <svg viewBox="0 0 700 330" preserveAspectRatio="xMidYMid meet">
 
-          <polyline points="55,218 178,184 301,150 424,127 547,104 670,82" fill="none" stroke="#18864b" stroke-width="5" stroke-linecap="round"/>
+          <!-- Axes -->
+          <line x1="70" y1="280" x2="670" y2="280" stroke="#d9e1e8" stroke-width="2"/>
+          <line x1="70" y1="35" x2="70" y2="280" stroke="#d9e1e8" stroke-width="2"/>
 
-          <circle cx="55" cy="218" r="5" fill="#18864b"/>
-          <circle cx="178" cy="184" r="5" fill="#18864b"/>
-          <circle cx="301" cy="150" r="5" fill="#18864b"/>
-          <circle cx="424" cy="127" r="5" fill="#18864b"/>
-          <circle cx="547" cy="104" r="5" fill="#18864b"/>
-          <circle cx="670" cy="82" r="5" fill="#18864b"/>
+          <!-- Grid lines -->
+          <line x1="70" y1="219" x2="670" y2="219" stroke="#eef2f6" stroke-width="1"/>
+          <line x1="70" y1="158" x2="670" y2="158" stroke="#eef2f6" stroke-width="1"/>
+          <line x1="70" y1="96" x2="670" y2="96" stroke="#eef2f6" stroke-width="1"/>
+          <line x1="70" y1="35" x2="670" y2="35" stroke="#eef2f6" stroke-width="1"/>
 
-          <text x="55" y="275" text-anchor="middle" font-size="13" fill="#667085">2025</text>
-          <text x="178" y="275" text-anchor="middle" font-size="13" fill="#667085">2026</text>
-          <text x="301" y="275" text-anchor="middle" font-size="13" fill="#667085">2027</text>
-          <text x="424" y="275" text-anchor="middle" font-size="13" fill="#667085">2028</text>
-          <text x="547" y="275" text-anchor="middle" font-size="13" fill="#667085">2029</text>
-          <text x="670" y="275" text-anchor="middle" font-size="13" fill="#667085">2030</text>
+          <!-- Y-axis labels -->
+          <text x="58" y="284" text-anchor="end" font-size="12" fill="#667085">0%</text>
+          <text x="58" y="223" text-anchor="end" font-size="12" fill="#667085">10%</text>
+          <text x="58" y="162" text-anchor="end" font-size="12" fill="#667085">20%</text>
+          <text x="58" y="100" text-anchor="end" font-size="12" fill="#667085">30%</text>
+          <text x="58" y="39" text-anchor="end" font-size="12" fill="#667085">40%</text>
 
-          <text x="382" y="118" font-size="13" fill="#18864b">Certified workplace coverage target</text>
+          <!-- Target pathway: 2018 to 2030 -->
+          <polyline
+            points="70,280 120,262 170,243 220,225 270,207 320,188 370,170 420,151 470,133 520,115 570,102 620,90 670,78"
+            fill="none"
+            stroke="#95052A"
+            stroke-width="4"
+            stroke-dasharray="8,7"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+          <!-- Actual performance: 2018 to 2025 -->
+          <polyline
+            points="70,217 120,214 170,149 220,135 270,114 320,84 370,134 420,54"
+            fill="none"
+            stroke="#18864b"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+          <!-- Actual performance points -->
+          <circle cx="70" cy="217" r="5" fill="#18864b"/>
+          <circle cx="120" cy="214" r="5" fill="#18864b"/>
+          <circle cx="170" cy="149" r="5" fill="#18864b"/>
+          <circle cx="220" cy="135" r="5" fill="#18864b"/>
+          <circle cx="270" cy="114" r="5" fill="#18864b"/>
+          <circle cx="320" cy="84" r="5" fill="#18864b"/>
+          <circle cx="370" cy="134" r="5" fill="#18864b"/>
+          <circle cx="420" cy="54" r="5" fill="#18864b"/>
+
+          <!-- X-axis labels -->
+          <text x="70" y="305" text-anchor="middle" font-size="12" fill="#667085">2018</text>
+          <text x="120" y="305" text-anchor="middle" font-size="12" fill="#667085">2019</text>
+          <text x="170" y="305" text-anchor="middle" font-size="12" fill="#667085">2020</text>
+          <text x="220" y="305" text-anchor="middle" font-size="12" fill="#667085">2021</text>
+          <text x="270" y="305" text-anchor="middle" font-size="12" fill="#667085">2022</text>
+          <text x="320" y="305" text-anchor="middle" font-size="12" fill="#667085">2023</text>
+          <text x="370" y="305" text-anchor="middle" font-size="12" fill="#667085">2024</text>
+          <text x="420" y="305" text-anchor="middle" font-size="12" fill="#667085">2025</text>
+          <text x="470" y="305" text-anchor="middle" font-size="12" fill="#667085">2026</text>
+          <text x="520" y="305" text-anchor="middle" font-size="12" fill="#667085">2027</text>
+          <text x="570" y="305" text-anchor="middle" font-size="12" fill="#667085">2028</text>
+          <text x="620" y="305" text-anchor="middle" font-size="12" fill="#667085">2029</text>
+          <text x="670" y="305" text-anchor="middle" font-size="12" fill="#667085">2030</text>
+
+          <!-- Line labels -->
+          <text x="455" y="124" font-size="13" fill="#95052A">Target pathway</text>
+          <text x="390" y="46" font-size="13" fill="#18864b">Actual performance</text>
         </svg>
       </div>
 
       <div class="legend">
-        <span>Target pathway</span>
+        <span>Actual performance</span>
+        <span class="target">Target pathway</span>
       </div>
     </section>
 
