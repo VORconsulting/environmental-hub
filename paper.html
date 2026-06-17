@@ -328,17 +328,20 @@
     <!-- ================== COUNTER AND PAPER USE BREAKDOWN ================== -->
     <section class="grid two">
       <div class="card">
-        <h2>Estimated Annual Paper Avoided</h2>
+        <h2>Cumulative Paper Reduction</h2>
         <div class="counter" id="paperCounter">0 t</div>
         <div class="label">
-          Demo counter showing the reduction in annual paper use from the 2018 baseline to 2023.
+          Cumulative reduction in paper consumption relative to the 2018 baseline, accumulated from 2019 to 2025.
         </div>
-        <div class="counter-sub">
-          The number animates to the estimated annual paper avoided in 2023 when the page loads.
-        </div>
+
         <div class="mini-metric">
-          <strong>2018 baseline</strong>
-          Paper use decreased from 1,208 tonnes in 2018 to 195 tonnes in 2023.
+          <strong>2025 paper performance</strong>
+          <p style="margin:0 0 4px;">
+            Paper use decreased from 1,387 tonnes in 2018 to 155.4 tonnes in 2025.
+          </p>
+          <p style="margin:0;">
+            This represents an 88.8% reduction from the 2018 baseline.
+          </p>
         </div>
       </div>
 
@@ -454,8 +457,8 @@
 
   <!-- ================== DEMO COUNTER SCRIPT ================== -->
   <script>
-    const startValue = 950.0;
-    const targetValue = 1013.0;
+    const startValue = 0;
+    const targetValue = 6297.09;
     const duration = 12000;
     const start = performance.now();
     const counter = document.getElementById("paperCounter");
