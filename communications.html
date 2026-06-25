@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absa Environmental Communication Centre</title>
+
+<style>
+  :root {
+    --absa-red: #be0028;
+    --absa-bright: #dc0037;
+    --text: #000000;
+    --muted: #6d6d6d;
+    --bg: #ffffff;
+    --soft-bg: #f7f7f7;
+    --border: #dcd7ca;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 56px;
+  }
+
+  /* ABSA-STYLE FULL WIDTH BANNER */
+  .banner {
+    min-height: 375px;
+    background-image:
+      linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)),
+      url("ADD_BANNER_IMAGE_URL_HERE");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 -24px 0;
+  }
+
+  .banner-title {
+    background: rgba(255,255,255,0.96);
+    padding: 28px 36px;
+    max-width: 620px;
+    margin: 0 0 40px 40px;
+  }
+
+  .banner-title h1 {
+    margin: 0;
+    color: var(--absa-red);
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+
+  .intro {
+    padding: 44px 0 28px;
+    max-width: 920px;
+  }
+
+  .intro h2 {
+    margin: 0 0 14px;
+    color: var(--absa-bright);
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .intro p {
+    margin: 0;
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  /* HUB INTRO SECTION */
+  .hub-intro {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 30px 0;
+    margin: 18px 0 34px;
+  }
+
+  .hub-intro h2 {
+    margin: 0 0 10px;
+    color: var(--absa-bright);
+    font-size: 24px;
+  }
+
+  .hub-intro p {
+    max-width: 760px;
+    margin: 0 0 20px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .hub-button {
+    display: inline-block;
+    background: var(--absa-red);
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-weight: bold;
+  }
+
+  .hub-button:hover {
+    background: var(--absa-bright);
+  }
+
+  /* HERO WEB PART SIMULATION */
+  .hero {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1fr;
+    grid-template-rows: 215px 215px;
+    gap: 10px;
+    margin: 34px 0 56px;
+  }
+
+  .hero-tile {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    min-height: 200px;
+  }
+
+  .hero-tile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.76), rgba(0,0,0,0.10));
+  }
+
+  .hero-content {
+    position: relative;
+    padding: 24px;
+  }
+
+  .hero-tile h3 {
+    margin: 0 0 8px;
+    font-size: 23px;
+    line-height: 1.15;
+  }
+
+  .hero-tile p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .hero-large {
+    grid-row: span 2;
+  }
+
+  .hero-large h3 {
+    font-size: 34px;
+  }
+
+  /* STANDARD SECTION */
+  .section {
+    margin: 54px 0;
+  }
+
+  .section h2 {
+    color: var(--absa-bright);
+    margin: 0 0 22px;
+    font-size: 24px;
+  }
+
+  /* NEWS / EDITORIAL STYLE */
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .news-card {
+    background: white;
+    border-top: 4px solid var(--absa-red);
+  }
+
+  .news-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .news-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .news-card p {
+    color: var(--text);
+    line-height: 1.55;
+    margin: 0 0 12px;
+    font-size: 15px;
+  }
+
+  .news-card a,
+  .text-link {
+    color: var(--absa-red);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  /* QUICK LINKS */
+  .quick-links {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+
+  .quick-link {
+    background: white;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 14px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .quick-link:hover {
+    color: var(--absa-red);
+    background: var(--soft-bg);
+  }
+
+  /* IMAGE GALLERY */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* SIMPLE CONTENT BLOCKS */
+  .simple-card {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: white;
+  }
+
+  .simple-card p {
+    margin-top: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .banner {
+      min-height: 300px;
+      margin: 0 -24px;
+    }
+
+    .banner-title {
+      margin: 0 24px 28px;
+      padding: 24px;
+    }
+
+    .banner-title h1 {
+      font-size: 30px;
+    }
+
+    .hero,
+    .news-grid,
+    .quick-links,
+    .gallery {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    .hero-large {
+      grid-row: auto;
+    }
+  }
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <!-- PAGE BANNER / TITLE AREA -->
+  <header class="banner">
+    <div class="banner-title">
+      <h1>Absa Environmental Communication Centre</h1>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>Environmental stories, highlights and initiatives across our workplaces</h2>
+    <p>
+      Discover how Absa is creating more sustainable workplaces through energy management,
+      climate action, waste and materials initiatives, and responsible water management.
+    </p>
+  </section>
+
+  <!-- HUB INTRO SECTION -->
+  <section class="hub-intro">
+    <h2>Environmental Performance & Action Hub</h2>
+
+    <p>
+      Explore environmental performance, targets, trends and actions across
+      Absa's Sustainable Workplaces programme.
+    </p>
+
+    <a class="hub-button" href="ADD_HUB_HOME_LINK_HERE">
+      Launch Hub
+    </a>
+  </section>
+
+  <!-- HERO WEB PART -->
+  <section class="hero">
+
+    <a class="hero-tile hero-large" href="building.html"
+       style="background-image:url('106_DSCF2907_office_compressed.jpg');">
+      <div class="hero-content">
+        <h3>Sustainable Workplaces</h3>
+        <p>Explore how Absa is maintaining sustainable workplaces and improving environmental performance associated with building.</p>
+      </div>
+    </a>
+
+    <a class="hero-tile" href="renewable.html"
+       style="background-image:url('209_DSCF3201_solar_compressed.jpg');">
+      <div class="hero-content">
+        <h3>Energy Management</h3>
+        <p>Explore how Absa is increasing the use of renewable energy and improving energy efficiency.</p>
+      </div>
+    </a>
+
+    <a class="hero-tile" href="ghg.html"
+       style="background-image:url('1_GHG_graphic.jpg');">
+      <div class="hero-content">
+        <h3>Climate & Emissions</h3>
+        <p>Explore how Absa is reducing greenhouse gas emissions and climate impacts.</p>
+      </div>
+    </a>
+
+    <a class="hero-tile" href="waste.html"
+       style="background-image:url('119_DSCF2937_composting_compressed.jpg');">
+      <div class="hero-content">
+        <h3>Waste & Materials</h3>
+        <p>Explore how Absa is supporting waste reduction and circular material use.</p>
+      </div>
+    </a>
+
+    <a class="hero-tile" href="water.html"
+       style="background-image:url('192_DSCF3166_water_compressed.jpg');">
+      <div class="hero-content">
+        <h3>Water Management</h3>
+        <p>Explore how Absa is saving water and encouraging responsible use.</p>
+      </div>
+    </a>
+
+  </section>
+
+  <!-- NEWS WEB PART -->
+  <section class="section">
+    <h2>Latest Environmental Highlights</h2>
+
+    <div class="news-grid">
+      <article class="news-card">
+        <img src="2_Hub_front_page.jpg" alt="Environmental Performance & Action Hub">
+        <h3>Environmental Performance & Action Hub launch</h3>
+        <p>Launching soon - a hub that will show our environmental performance and actions that can be taken.</p>
+        <a href="index.html">Read more</a>
+      </article>
+
+      <article class="news-card">
+        <img src="201_DSCF3205_emissions_compressed.jpg" alt="GHG emissions reduction">
+        <h3>GHG emissions reaches a new low</h3>
+        <p>Absa has reduced GHG emissions by 122,920 tCO₂e (45%) since 2018, and has reached a new low of 149,860 tCO₂e in 2025.</p>
+        <a href="GHG.html">Read more</a>
+      </article>
+
+      <article class="news-card">
+        <img src="3_Paper_use.jpg" alt="Paper use">
+        <h3>Major reduction in paper use</h3>
+        <p>Absa has reduced paper usage by 89% since 2018, and has avoided 6,000 tonnes of paper from 2019 to 2025.</p>
+        <a href="paper.html">Read more</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTED CONTENT WEB PART -->
+  <section class="section">
+    <h2>In Pictures</h2>
+
+    <div class="gallery">
+      <img src="ADD_GALLERY_IMAGE_1_HERE" alt="">
+      <img src="ADD_GALLERY_IMAGE_2_HERE" alt="">
+      <img src="ADD_GALLERY_IMAGE_3_HERE" alt="">
+      <img src="ADD_GALLERY_IMAGE_4_HERE" alt="">
+    </div>
+  </section>
+
+  <!-- OPTIONAL EVENTS WEB PART -->
+  <section class="section">
+    <h2>Upcoming Environmental Events</h2>
+    <div class="simple-card">
+      <p>Add this section only if there are real events or campaigns to promote.</p>
+      <a class="text-link" href="ADD_EVENTS_LINK_HERE">View events</a>
+    </div>
+  </section>
+
+  <!-- OPTIONAL PEOPLE WEB PART -->
+  <section class="section">
+    <h2>CRES Environmental Team</h2>
+    <div class="simple-card">
+      <p>Use this section only if Marachel wants the team or contact person visibly listed.</p>
+      <a class="text-link" href="ADD_CONTACT_LINK_HERE">Contact the team</a>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
