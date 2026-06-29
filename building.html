@@ -319,44 +319,48 @@
       </div>
 
       <div class="card">
-        <h2>GHG Emissions</h2>
-        <div class="value">9,527 tCO₂e</div>
-        <div class="label">Total GHG emissions in 2025.</div>
-        <div class="status good">Emissions reducing</div>
+        <h2>Waste</h2>
+        <div class="value">35.9 t</div>
+        <div class="label">Total waste recycled or composted in 2025.</div>
+        <div class="status good">Wast consumption reducing</div>
       </div>
     </section>
 
     <!-- ================== BUILDING PERFORMANCE SUMMARY ================== -->
-    <section class="grid two">
+     <section class="grid two">
       <div class="card">
-        <h2>15 Alice Lane Performance Snapshot</h2>
-        <div class="counter" id="buildingCounter">0 kWh</div>
+        <h2>GHG emissions</h2>
+        <div class="counter" id="ghgCounter">0 tCO₂e</div>
         <div class="label">
-          Demo counter showing reported annual energy consumption for 15 Alice Lane.
+          Total GHG emissions in 2025.
         </div>
-        <div class="counter-sub">
-          The number animates to the building-level energy value when the page loads.
-        </div>
-
-        <div class="mini-metric">
-          <strong>Building-level view</strong>
-          The same structure can be used to compare energy, water, GHG emissions, waste and certified area across selected major buildings.
-        </div>
+      <div class="mini-metric">
+       <strong>Improvements in energy consumption and GHG emissions:</strong>
+       <p style="margin:0 0 4px;">
+        Energy from Diesel was reduced to 0.2 GWh in 2025.
+       </p>
+       <p style="margin:0 0 4px;">
+       Energy from Electricity was reduced to 8.8 GWh in 2025
+       </p>
+       <p style="margin:0 0 4px;">
+        GHG emissions from Diesel was reduced to 64.5 tCO₂e in 2025.
+       </p>
+       <p style="margin:0 0 4px;">
+        GHG emissions from Electricity was reduced to 9,526.6 tCO₂e in 2025.
+       </p>
       </div>
-
+      </div>
+       
       <div class="card">
-        <h2>Key Performance Metrics</h2>
+        <h2>Key Environmental Performance Drivers</h2>
         <div class="source-list">
-          <div class="source"><strong>Energy from Diesel</strong>0.2 GWh</div>
-          <div class="source"><strong>Energy from Electricity</strong>8.8 GWh</div>
-          <div class="source"><strong>Diesel GHG emissions</strong>64.5 tCO₂e</div>
-          <div class="source"><strong>Electricity GHG emissions</strong>9,526.6 tCO₂e</div>
-          <div class="source"><strong>Water</strong>13,106 kL</div>
-          <div class="source"><strong>Total Waste Consumption</strong>55.3 t</div>
-          <div class="source"><strong>Waste Recycled or Composted</strong>35.9 t</div>
+          <div class="source"><strong>Energy</strong>Reduce Diesel and Electricity consumption</div>
+          <div class="source"><strong>GHG emissions</strong>Reduce GHG emissions by increasing use of renewable energy and reducing overall energy consumption</div>
+          <div class="source"><strong>Waste</strong>Increase recycling and composting, while reducing paper consumption</div>
+          <div class="source"><strong>Water</strong>Prevent leaks and reduce overall water consumption</div>
         </div>
       </div>
-    </section>
+    </section> 
 
     <!-- ================== BUILDING PERFORMANCE TREND / PROFILE ================== -->
     <section class="card">
@@ -503,8 +507,8 @@
 
   <!-- ================== DEMO COUNTER SCRIPT ================== -->
   <script>
-    const startValue = 1500000;
-    const targetValue = 1874196;
+    const startValue = 0;
+    const targetValue = 9527;
     const duration = 12000;
     const start = performance.now();
     const counter = document.getElementById("buildingCounter");
