@@ -330,7 +330,7 @@
      <section class="grid two">
       <div class="card">
         <h2>GHG emissions</h2>
-        <div class="counter" id="ghgCounter">9,591 tCO₂e</div>
+        <div class="counter" id="ghgCounter">0 tCO₂e</div>
         <div class="label">
           Total GHG emissions in 2025.
         </div>
@@ -449,13 +449,13 @@
 
   </div>
 
-  <!-- ================== DEMO COUNTER SCRIPT ================== -->
+  <!-- ================== COUNTER SCRIPT ================== -->
   <script>
     const startValue = 0;
-    const targetValue = 9527;
+    const targetValue = 9591;
     const duration = 12000;
     const start = performance.now();
-    const counter = document.getElementById("buildingCounter");
+    const counter = document.getElementById("ghgCounter");
 
     function animateCounter(now) {
       const progress = Math.min((now - start) / duration, 1);
@@ -465,7 +465,7 @@
       counter.textContent = value.toLocaleString(undefined, {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
-      }) + " kWh";
+      }) + " tCO₂e";
 
       if (progress < 1) {
         requestAnimationFrame(animateCounter);
